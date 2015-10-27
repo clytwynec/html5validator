@@ -68,7 +68,7 @@ class Validator(object):
                 raise JavaNotFoundException()
 
         try:
-            o = subprocess.check_output(['java', '-Xss512k', '-jar',
+            o = subprocess.check_output(['java', '-Xss1024k', '-jar',
                                          self.vnu_jar_location] + opts + files,
                                         stderr=subprocess.STDOUT,
                                         ).decode('utf-8')
